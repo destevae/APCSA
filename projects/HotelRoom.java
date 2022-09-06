@@ -1,5 +1,3 @@
-package projects;
-
 public class HotelRoom {
     int roomNumber;
     Person guestOne;
@@ -23,7 +21,7 @@ public class HotelRoom {
         }
 
         else if (GuestCounter == 2){
-            System.out.println("The hotel room is full.");
+            System.out.println("The hotel room is full!!!!!!!");
         }
         
     }
@@ -31,8 +29,18 @@ public class HotelRoom {
     // checks out a guest from their room
     void checkOut(Person guest){
         if (guest == guestOne){
+            guestOne.reset();
             GuestCounter--;
             
+        }
+
+        else if (guest == guestTwo){
+            GuestCounter--;
+            guestTwo = null;
+        }
+
+        else {
+            System.out.println("The guest you are trying to remove is not in the room.");
         }
     }
 

@@ -1,5 +1,3 @@
-package projects;
-
 public class Person {
     double height;
     int age;
