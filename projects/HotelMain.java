@@ -4,15 +4,12 @@ public class HotelMain{
         HotelRoom room_one = new HotelRoom(1);
         Person firstGuest = new Person(67, 20, "Elaine", "Black");
         Person secondGuest = new Person(50, 19, "Mattie", "Brown");
+        Person thirdGuest = new Person(50, 61, "Hello!!!!", "Blonde");
 
-        room_one.checkIn(firstGuest);
-        System.out.println(room_one.GuestCounter);
-        System.out.println(room_one.guestOne);
-
+        // testing functions
         room_one.checkIn(secondGuest);
-
-        room_one.checkOut(firstGuest);
-        System.out.println(room_one.GuestCounter);
+        room_one.checkOut(secondGuest);
+        room_one.printGuestInfo();
     }
     
 }
