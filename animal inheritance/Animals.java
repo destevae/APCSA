@@ -1,16 +1,24 @@
 public class Animals{
-    String name;
-    public String unique_trait;
+    Phyla phylaOne;
+    Phyla phylaTwo;
 
-    Animals(String phylaName, String phylaTrait){
+    Animals(){
+        phylaOne = new Phyla("Arthropoda");
+        phylaTwo = new Phyla("Chordata");
+    }
+
+    String name;
+    public String uniqueTrait;
+
+    /* Animals(String phylaName, String uniqueTrait){
         name = phylaName;
-        trait = phylaTrait;
-        System.out.println("Unique Trait: "+ unique_trait);
+        String trait = uniqueTrait;
+        System.out.println("Unique Trait: "+ uniqueTrait);
     }
 
     void PrintTrait(){
         System.out.println("Animal: " + name);
-        System.out.println("  trait: " + unique_trait);
+        System.out.println("  trait: " + uniqueTrait);
         super.PrintTrait();
-    }
+    } */
 }
