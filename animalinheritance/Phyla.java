@@ -4,6 +4,8 @@ public class Phyla {
 
     public Phyla(String nameP){
         phylaName = nameP;
+
+        // assigns traits to all the phylas
         if(phylaName == "Chordata"){
             phylaTrait  = "has a notochord";
         }

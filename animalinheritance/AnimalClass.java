@@ -8,6 +8,7 @@ public class AnimalClass extends Subphyla{
         super(phylaNameP, subphylaNameP);
         className = classNameP;
 
+        // assins traits to all the classes of animals
         if(className == "Horseshoe Crabs"){
             classTrait = "has a round and hard and brownish-green exoskeleton";
         }

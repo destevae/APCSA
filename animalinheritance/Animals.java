@@ -8,7 +8,7 @@ public class Animals extends Family{
         name = nameP;
         uniqueTrait = traitP;
     
-
+        // assigns traits to all the animals
         if(name == "hammerhead shark"){
             uniqueTrait = "flat head shark";
         }
