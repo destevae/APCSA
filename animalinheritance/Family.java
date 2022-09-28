@@ -5,7 +5,7 @@ public class Family extends AnimalClass {
         super(classNameP, phylaNameP, subphylaNameP); // refering to the constructor of Animal Class
         familyName = famNameP;
 
-        // assins traits to all the families of animals
+        // assigns traits to all the families of animals
         if(familyName == "shark"){
             familyTrait = "very scary animals";
         }
