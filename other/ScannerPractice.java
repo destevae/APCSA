@@ -3,6 +3,7 @@ import java.util.*;
 
 public class ScannerPractice {
     public static void main(String[] args) throws Exception{
+
         File top40 = new File("./Top_40s_September_22.txt");
 
         try{   

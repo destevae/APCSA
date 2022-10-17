@@ -1,11 +1,14 @@
-import turtle
+import random
+print(30 % 60)
+num = random.randrange(0, 31)
 
-# opening turtle screen
-s = turtle.getscreen()
-t = turtle.Turtle()
+lineNum = 0
+with open('wordList.txt') as f:
+    while True:
+        line = f.readline()
+        lineNum = lineNum + 1
+        if not line:
+            break
+        print(line.strip())
 
-# turtle moves
-t.right(90)
-t.forward(100)
-t.left(90)
-t.backward(100)
+
