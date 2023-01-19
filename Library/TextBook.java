@@ -8,6 +8,6 @@ public class TextBook extends Book{
     }
 
     void printInfo(){
-        System.out.println(title + " " + genre + " " + author + " " + subject + " " + edition);
+        super.printInfo();
     }
 }

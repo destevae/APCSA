@@ -10,6 +10,6 @@ public class NonfictionBook extends Book{
     }
 
     void printInfo(){
-        System.out.println(title + " " + author + " " + genre);
+        super.printInfo();
     }
 }

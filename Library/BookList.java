@@ -7,30 +7,31 @@ import java.util.Scanner;
 public class BookList {
 
     // creates empty book arraylist
-    ArrayList<Book> booklist = new ArrayList<Book>();
+    ArrayList<Book> bookarray = new ArrayList<Book>();
 
-    BookList(){}
-
-    // creates book list, reads scanner
-    void createBookList(){
-
-        
+    BookList(){
+        bookarray = new ArrayList<Book>();
     }
 
-    void addToList(String title, String genre) throws Exception{
+
+    void addToList(Book theBook) throws Exception{
         // if book exists, then add to quantity. if book doesn't, then create new
+        boolean isCopy = false;
+        if(theBook.genre == "Nonfiction"){
+            for(Book i : bookarray){
+                if(theBook.isEquals(i)){
+                    theBook.addtoInt();
+                    isCopy = true;
+                    break;
+                }
+            }
+
+            if(isCopy == false){
+                bookarray = add(theBook);
+            }
+            
+        }
         
-        // https://techvidvan.com/tutorials/read-csv-file-in-java/
-        Scanner sc = new Scanner(new File("./booklist.csv"));
-        
-        while(sc.hasNext()){ // creates new book, calls addToList method
-            if(genre.equals("Nonfiction")){
-                NonfictionBook mybook = new NonfictionBook(sc.nextLine());
-
-                // set the csv line's content to the nonfiction book's attributes
-
-
-
                 // if item is already in arraylist, then add to quantity
                 if(NonfictionBook.integers > 0){
                     int x = (int) NonfictionBook.integers;

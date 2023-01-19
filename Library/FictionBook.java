@@ -8,6 +8,6 @@ public class FictionBook extends Book{
     }
 
     void printInfo(){
-        System.out.println(title + " " + author + " " + edition);
+        super.printInfo();
     }
 }
