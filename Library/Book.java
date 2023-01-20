@@ -1,6 +1,4 @@
-package Library;
-
-public abstract class Book {
+abstract class Book {
     String title;
     String genre;
     String author;
@@ -10,6 +8,7 @@ public abstract class Book {
 
     Book(String csvLine){
         String [] attributes = csvLine.split(",");
+        title = attributes[0];
         genre = attributes[1];
         author = attributes[2];
         subject = attributes[3];
@@ -18,7 +17,13 @@ public abstract class Book {
     }
 
     void printInfo(){
-       System.out.println(title + " " + genre + " " + author + " " + subject + " " + edition + " " + integers); 
+       System.out.println("Title:" + title); 
+       System.out.println("Genre:" + genre);
+       System.out.println("Author:" + author);
+       System.out.println("Subject:" + subject);
+       System.out.println("Edition:" + edition);
+       System.out.println("Copies:" + integers);
+       System.out.println("");
     }
 
     public String getTitle(){
@@ -47,7 +52,7 @@ public abstract class Book {
 
     public boolean isEquals(Book compareBook){
         if(compareBook.title.equals(title) && compareBook.genre.equals(genre) && compareBook.author.equals(author) && compareBook.subject.equals(subject) 
-           && compareBook.edition == edition && compareBook.integers == integers){
+           && compareBook.edition == edition){
             return true;
         }
 
@@ -56,6 +61,10 @@ public abstract class Book {
 
     public void addtoInt(){
         integers++;
+    }
+
+    public void subtractFromInt(){
+        integers--;
     }
 
     

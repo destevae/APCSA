@@ -1,5 +1,3 @@
-package Library;
-
 import java.io.* ;
 import java.util.Scanner;
 
@@ -10,35 +8,31 @@ public class LibraryMain{
 
         // https://techvidvan.com/tutorials/read-csv-file-in-java/
         Scanner sc = new Scanner(new File("./booklist.csv"));
-        
-        while(sc.hasNext()){ // creates new book, calls addToList method
 
-            // MR DURRETT //
+        sc.nextLine();
+        while(sc.hasNext()){ // creates new book, calls addToList method
 
             String input = sc.nextLine();
             String [] data = input.split(",");
+            
 
-            if(data[1] == "Nonfiction"){
-                myBooks.addToList(new FictionBook(data));
+            if(data[1].equals("Nonfiction")){
+                Book myBook = new NonfictionBook(input);
+                myBooks.addToList(myBook);
+                myBook.printInfo();
             }
 
-
-            if(Book.genre.equals("Nonfiction")){
-                Book mybook = new NonfictionBook(sc.nextLine());
-                myBooks.addToList(mybook);
-
+            if(data[1].equals("Fiction")){
+                Book myBook = new FictionBook(input);
+                myBooks.addToList(myBook);
+                myBook.printInfo();
             }
 
-            else if(Book.genre.equals("Fiction")){
-                Book mybook = new FictionBook(sc.nextLine());
-                myBooks.addToList(mybook);
-            }
-    
-            else if(Book.genre.equals("TextBook")){
-                Book mybook = new TextBook(sc.nextLine());
-                myBooks.addToList(mybook);
+            if(data[1].equals("Textbook")){
+                Book myBook = new TextBook(input);
+                myBooks.addToList(myBook);
+                myBook.printInfo();
             }
         }
-    
     }
 }

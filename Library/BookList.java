@@ -1,13 +1,9 @@
-package Library;
-
 import java.util.*;
-import java.io.* ;
-import java.util.Scanner;
 
 public class BookList {
 
     // creates empty book arraylist
-    ArrayList<Book> bookarray = new ArrayList<Book>();
+    ArrayList<Book> bookarray;
 
     BookList(){
         bookarray = new ArrayList<Book>();
@@ -17,56 +13,37 @@ public class BookList {
     void addToList(Book theBook) throws Exception{
         // if book exists, then add to quantity. if book doesn't, then create new
         boolean isCopy = false;
-        if(theBook.genre == "Nonfiction"){
-            for(Book i : bookarray){
-                if(theBook.isEquals(i)){
-                    theBook.addtoInt();
-                    isCopy = true;
-                    break;
-                }
-            }
-
-            if(isCopy == false){
-                bookarray = add(theBook);
-            }
-            
-        }
-        
-                // if item is already in arraylist, then add to quantity
-                if(NonfictionBook.integers > 0){
-                    int x = (int) NonfictionBook.integers;
-                    x++;
-                    NonfictionBook.integers = x;
-                }
-                
-                booklist.add(mybook);
-            }
-
-            if(genre.equals("Fiction")){
-                FictionBook mybook = new FictionBook(sc.nextLine());
-                booklist.add(mybook);
-            }
-
-            if(genre.equals("TextBook")){
-                TextBook mybook = new TextBook(sc.nextLine());
-                booklist.add(mybook);
+        for(Book i : bookarray){
+            if(theBook.isEquals(i)){
+                theBook.addtoInt();
+                isCopy = true;
+                break;
             }
         }
 
-        sc.close();
+        if(isCopy == false){
+            bookarray.add(theBook);
+        }
     }
 
 
+    void removeFromList(Book theBook){
+        if(theBook.integers > 1){
+            theBook.subtractFromInt();
+        }
 
-    void removeFromList(Book myBook){
-
+        else{
+            bookarray.remove(theBook);
+        }
     }
+
 
     // sorts booklist by sortingMethod
     void sortList(String sortingMethod){
         
     }
 
+    
     void printTable(){
 
     }

@@ -1,5 +1,3 @@
-package Library;
-
 public class FictionBook extends Book{
     String edition;
     
