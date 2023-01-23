@@ -34,5 +34,7 @@ public class LibraryMain{
                 myBook.printInfo();
             }
         }
+
+        myBooks.sortList("subject");
     }
 }

@@ -5,6 +5,7 @@ abstract class Book {
     String subject;
     int edition;
     int integers;
+    
 
     Book(String csvLine){
         String [] attributes = csvLine.split(",");
@@ -13,7 +14,7 @@ abstract class Book {
         author = attributes[2];
         subject = attributes[3];
         edition = Integer.parseInt(attributes[4]);
-        integers = 1;
+        int integers = 1;
     }
 
     void printInfo(){
@@ -22,7 +23,6 @@ abstract class Book {
        System.out.println("Author:" + author);
        System.out.println("Subject:" + subject);
        System.out.println("Edition:" + edition);
-       System.out.println("Copies:" + integers);
        System.out.println("");
     }
 
@@ -53,6 +53,7 @@ abstract class Book {
     public boolean isEquals(Book compareBook){
         if(compareBook.title.equals(title) && compareBook.genre.equals(genre) && compareBook.author.equals(author) && compareBook.subject.equals(subject) 
            && compareBook.edition == edition){
+            // System.out.println("BOOK TITLE COMPARED: " + compareBook.title);
             return true;
         }
 
