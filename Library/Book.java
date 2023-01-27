@@ -39,7 +39,13 @@ abstract class Book {
     }
 
     public String getSubject(){
-        return subject;
+        if(subject.equals("")){
+            return "N/A";
+        }
+        else{
+            return subject;
+        }
+        
     }
 
     public int getEdition(){

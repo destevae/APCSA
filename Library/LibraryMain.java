@@ -19,22 +19,20 @@ public class LibraryMain{
             if(data[1].equals("Nonfiction")){
                 Book myBook = new NonfictionBook(input);
                 myBooks.addToList(myBook);
-                myBook.printInfo();
             }
 
             if(data[1].equals("Fiction")){
                 Book myBook = new FictionBook(input);
                 myBooks.addToList(myBook);
-                myBook.printInfo();
             }
 
             if(data[1].equals("Textbook")){
                 Book myBook = new TextBook(input);
                 myBooks.addToList(myBook);
-                myBook.printInfo();
             }
         }
 
-        myBooks.sortList("subject");
+        myBooks.sortList("author");
+        myBooks.printTable();
     }
 }
