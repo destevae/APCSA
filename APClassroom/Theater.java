@@ -7,9 +7,23 @@ public class Theater {
 
     */
 
-    public Theater(int seatsPerRow, int tier1Rows, int tier2Rows)
+    public Theater(int seatsPerRow, int tier1Rows, int tier2Rows){  
+        
+        for(int i = 0; i < tier1Rows; i++){
+            for(int j = 0; j < seatsPerRow; j++){
+                Seat mySeat = new Seat(true, 1);
+                theaterSeats[i][j] = mySeat;
+            }
+        }
 
-    {  /* to be implemented in part (a) */  }
+        for(int i = tier1Rows; i < tier2Rows + tier1Rows; i++){
+            for(int j = 0; j < seatsPerRow; j++){
+                Seat mySeat = new Seat(true, 1);
+                theaterSeats[i][j] = mySeat;
+            }
+        }
+    
+    }
 
     /** Returns true if a seat holder was reassigned from the seat at fromRow, fromCol
 
